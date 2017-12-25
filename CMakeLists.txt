@@ -48,7 +48,6 @@ set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR})
 set(LIBRARY_OUTPUT_PATH    ${CMAKE_BINARY_DIR})
 
 #
-# [C++]
 # Creates a variable StdFeatures. CMake will require the compiler to provide
 # these features.
 #
@@ -64,6 +63,12 @@ set(StdFeatures
 	cxx_constexpr
 	cxx_lambdas
 	)
+
+# The command message(...) outputs a message.
+
+# Outputs all available StdFeatures for C and C++:
+message("${CMAKE_C_COMPILE_FEATURES}")
+message("${CMAKE_CXX_COMPILE_FEATURES}")
 
 #
 # [Optional]
